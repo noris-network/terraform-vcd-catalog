@@ -23,16 +23,19 @@ variable "description" {
 variable "storage_profile_name" {
   description = "Name of Storage Profile."
   type        = string
+  default     = null
 }
 
 variable "delete_recursive" {
   description = "When destroying use delete_recursive=True to remove the catalog and any objects it contains that are in a state that normally allows removal."
   type        = bool
+  default     = false
 }
 
 variable "delete_force" {
   description = "When destroying use delete_force=true with delete_recursive=true to remove a catalog and any objects it contains, regardless of their state."
   type        = bool
+  default     = false
 }
 
 variable "publish_enabled" {
